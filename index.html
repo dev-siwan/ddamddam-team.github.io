@@ -39,7 +39,8 @@
 
 <header class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-700">
     <div class="container mx-auto px-3 sm:px-6 py-2.5 sm:py-4 flex justify-between items-center">
-        <img src="images/oww_icon.png" alt="오운완" class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl flex-shrink-0">
+        <img src="images/oww_icon.png" alt="오운완"
+             class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl flex-shrink-0">
         <div class="flex items-center gap-2 sm:gap-3">
             <a href="https://open.kakao.com/o/sc2ApFfi" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium transition text-[10px] sm:text-sm whitespace-nowrap">
@@ -190,51 +191,92 @@
         </div>
     </div>
 </section>
-
-<section id="features" class="py-10 sm:py-16 md:py-24 bg-gray-800">
+<section id="features" class="py-16 sm:py-20 md:py-24 bg-gray-800">
     <div class="container mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10 sm:mb-16">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">센터 운영에 꼭 필요한 기능만
-                담았습니다</h2>
-            <p class="text-gray-400 text-sm sm:text-base">복잡한 기능은 빼고, 회원들의 '동기 부여'에만 집중했습니다.</p>
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-white">
+                센터 운영에 <br class="sm:hidden"/>꼭 필요한 기능만 담았습니다
+            </h2>
+            <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+                복잡한 기능은 뺐습니다.<br class="sm:hidden"> 오직 회원들의 <strong>'동기 부여'</strong>와
+                <strong>'소속감'</strong>에만 집중했습니다.
+            </p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-900/50 rounded-xl flex items-center justify-center text-blue-400 text-xl sm:text-2xl mb-4 sm:mb-6">
-                    <i class="fas fa-camera"></i>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
+
+            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
+                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
+                    <img src="images/feature_1.png"
+                         alt="간편한 운동 인증"
+                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">간편한 운동 인증</h3>
-                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                    복잡한 절차 없이 사진 한 장으로 오늘의 운동을 기록합니다.
-                </p>
-            </div>
-            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600 sm:col-span-2 md:col-span-1">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-green-900/50 rounded-xl flex items-center justify-center text-green-400 text-xl sm:text-2xl mb-4 sm:mb-6">
-                    <i class="fas fa-trophy"></i>
+
+                <div class="mt-auto">
+                    <div class="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center text-blue-400 text-xl mb-4">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">운동인증 공유</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        센터 내 회원들이 서로의 운동 인증을 보고 응원합니다.
+                    </p>
                 </div>
-                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">참여형 서비스</h3>
-                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                    랭킹 시스템을 통해 자연스럽게 경쟁이 일어나고, 회원들의 참여를 유도합니다.
-                </p>
             </div>
-            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-purple-900/50 rounded-xl flex items-center justify-center text-purple-400 text-xl sm:text-2xl mb-4 sm:mb-6">
-                    <i class="fas fa-users"></i>
+
+            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
+                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
+                    <img src="images/feature_2.png"
+                         alt="참여형 서비스"
+                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">센터 전용 커뮤니티</h3>
-                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                    공지사항 전달은 물론, 회원 간 소통의 장이 됩니다.
-                </p>
-            </div>
-            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600 sm:col-span-2 md:col-span-1">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-green-900/50 rounded-xl flex items-center justify-center text-green-400 text-xl sm:text-2xl mb-4 sm:mb-6">
-                    <i class="fas fa-chart-line"></i>
+
+                <div class="mt-auto">
+                    <div class="w-12 h-12 bg-green-900/50 rounded-xl flex items-center justify-center text-green-400 text-xl mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">참여형 서비스</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        랭킹 시스템을 통해 자연스럽게 건전한 경쟁이 일어납니다.
+                    </p>
                 </div>
-                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">출석 및 활동 데이터</h3>
-                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                    누가 열심히 나오는지, 누가 이탈 위험이 있는지 한눈에 파악하세요. 데이터에 기반한 회원 관리가 가능합니다.
-                </p>
             </div>
+
+            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
+                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
+                    <img src="images/feature_3.png"
+                         alt="센터 전용 커뮤니티"
+                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="mt-auto">
+                    <div class="w-12 h-12 bg-purple-900/50 rounded-xl flex items-center justify-center text-purple-400 text-xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">센터 전용 커뮤니티</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        공지사항 전달은 물론, 회원들이 서로 소통합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
+                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
+                    <img src="images/feature_4.png"
+                         alt="출석 및 활동 데이터"
+                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="mt-auto">
+                    <div class="w-12 h-12 bg-gray-900/50 rounded-xl flex items-center justify-center text-gray-400 text-xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">출석 및 활동 데이터</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        누가 이탈 위험군인지 한눈에 파악하세요.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -266,7 +308,7 @@
             <img src="images/oww_icon.png" alt="오운완" class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl">
             <div>
                 <div class="text-xl sm:text-2xl font-bold text-white mb-0.5">오운완</div>
-                <p class="text-xs sm:text-sm">운동 인증 커뮤니티 솔루션</p>
+                <p class="text-xs sm:text-sm">운동 인증 서비스</p>
             </div>
         </div>
         <div class="text-xs sm:text-sm">
