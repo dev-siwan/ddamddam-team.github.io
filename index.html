@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오운완 - 피트니스 센터를 위한 커뮤니티 솔루션</title>
+    <link rel="icon" type="image/png" href="images/oww_icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          rel="stylesheet">
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { font-family: 'Pretendard', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @media (max-width: 767px) {
+            .stat-card + .stat-card {
+                border-top: 1px solid rgba(55, 65, 81, 0.5);
+            }
+        }
+    </style>
+    <style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* 전체 길이의 반(세트 A)만큼 이동 후 리셋 */
+        }
+        .animate-scroll {
+            animation: scroll 20s linear infinite; /* 40초 동안 한 바퀴 (숫자가 클수록 느려짐) */
+        }
+        .paused {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+<header class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-700">
+    <div class="container mx-auto px-3 sm:px-6 py-2.5 sm:py-4 flex justify-between items-center">
+        <img src="images/oww_icon.png" alt="오운완" class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl flex-shrink-0">
+        <div class="flex items-center gap-2 sm:gap-3">
+            <a href="https://open.kakao.com/o/sc2ApFfi" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium transition text-[10px] sm:text-sm whitespace-nowrap">
+                <i class="fas fa-comment mr-1"></i> 도입 문의
+            </a>
+            <a href="https://smore.im/form/wGrMVYhYLJ" target="_blank" rel="noopener noreferrer"
+               class="inline-flex bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium transition shadow-lg shadow-blue-500/30 text-[10px] sm:text-sm whitespace-nowrap">
+                사전 등록
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="pt-24 pb-10 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28 px-4 sm:px-6">
+    <div class="container mx-auto text-center max-w-4xl">
+        <span class="inline-block py-1.5 px-4 rounded-full bg-blue-900/50 text-blue-400 text-xs sm:text-sm font-semibold mb-5 sm:mb-6">
+            🚀 2026년 7월 정식 런칭 예정
+        </span>
+
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-8">
+            📢 사장님, 혹시 이런 고민 없으신가요?
+        </h1>
+
+        <div class="space-y-4 text-left max-w-2xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-700">
+            <div class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-xl flex-shrink-0"></i>
+                <p class="text-lg text-gray-300">신규 회원을 겨우 모집하면 <strong>기존 회원은 자꾸 그만둬요.</strong>
+                </p>
+            </div>
+            <div class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-xl flex-shrink-0"></i>
+                <p class="text-lg text-gray-300">센터 전용 앱이 있으면 좋겠지만, <strong>개발비가 너무 부담돼요.</strong>
+                </p>
+            </div>
+            <div class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-xl flex-shrink-0"></i>
+                <p class="text-lg text-gray-300">회원들이 서로 어울리면서 <strong>오래 다니는 분위기</strong>를 만들고 싶어요.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gray-900 overflow-hidden">
+    <div class="container mx-auto px-6 text-center mb-10">
+        <h2 class="text-3xl font-bold text-white mb-2">오운완이 해결해드릴게요.</h2>
+        <p class="text-gray-400">오운완 서비스 유저들은 이 순간에도 <strong>공유</strong>하고 있습니다.</p>
+    </div>
+
+    <div class="relative w-full group">
+
+        <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-900 to-transparent z-10"></div>
+
+        <div class="flex space-x-6 animate-scroll group-hover:paused w-max">
+
+            <div class="flex space-x-6">
+                <img src="images/img_1.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증1">
+                <img src="images/img_2.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증2">
+                <img src="images/img_3.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증3">
+                <img src="images/img_4.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증4">
+                <img src="images/img_5.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증5">
+                <img src="images/img_6.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증6">
+            </div>
+
+            <div class="flex space-x-6">
+                <img src="images/img_1.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증1">
+                <img src="images/img_2.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증2">
+                <img src="images/img_3.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증3">
+                <img src="images/img_4.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증4">
+                <img src="images/img_5.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증5">
+                <img src="images/img_6.jpeg"
+                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
+                     alt="인증6">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section
+        class="py-20 md:py-32 bg-gray-800 border-b border-gray-700 flex items-center justify-center text-center">
+    <div class="container mx-auto px-6">
+
+        <div class="mb-6 relative inline-block">
+            <div class="absolute inset-0 bg-yellow-400 blur-3xl opacity-10 rounded-full"></div>
+            <h2 class="relative text-7xl md:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-yellow-500 tracking-tighter">
+                10배 ⬆
+            </h2>
+        </div>
+
+        <div class="space-y-4 max-w-3xl mx-auto">
+            <h3 class="text-2xl md:text-4xl font-bold text-white leading-relaxed">
+                혼자 운동할 때보다<br>
+                <span class="text-yellow-400 border-b-4 border-yellow-400/30 pb-1">함께하는 모임에서</span><br>
+                활동량이 폭발적으로 늘어났습니다.
+            </h3>
+            <p class="text-gray-400 text-lg mt-6">
+                운동은 의지가 아니라 환경입니다.<br>
+                오운완이 그 환경을 만들어 드립니다.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 text-center max-w-4xl">
+        <h2 class="text-3xl font-bold mb-4">수천만 원 드는 앱 개발?</h2>
+        <p class="text-xl text-gray-400 mb-12">이제 필요 없습니다.<br> 참여시스템 + 커뮤니티 제공 </p>
+
+        <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/3 flex justify-center">
+                <div class="w-40 h-40 bg-gray-700 rounded-xl flex items-center justify-center text-white text-6xl">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3 text-left">
+                <h3 class="text-2xl font-bold mb-3 text-blue-400">QR 코드 하나면 끝!</h3>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    센터에는 <strong>참여용 QR 코드만 비치</strong>하세요.<br>
+                    회원은 QR을 통해 스스로 가입하고 인증합니다.<br>
+                    별도의 관리 없이도 회원들이 알아서 참여 구조를 만들어갑니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="py-10 sm:py-16 md:py-24 bg-gray-800">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 sm:mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">센터 운영에 꼭 필요한 기능만
+                담았습니다</h2>
+            <p class="text-gray-400 text-sm sm:text-base">복잡한 기능은 빼고, 회원들의 '동기 부여'에만 집중했습니다.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-900/50 rounded-xl flex items-center justify-center text-blue-400 text-xl sm:text-2xl mb-4 sm:mb-6">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">간편한 운동 인증</h3>
+                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                    복잡한 절차 없이 사진 한 장으로 오늘의 운동을 기록합니다.
+                </p>
+            </div>
+            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600 sm:col-span-2 md:col-span-1">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-green-900/50 rounded-xl flex items-center justify-center text-green-400 text-xl sm:text-2xl mb-4 sm:mb-6">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">참여형 서비스</h3>
+                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                    랭킹 시스템을 통해 자연스럽게 경쟁이 일어나고, 회원들의 참여를 유도합니다.
+                </p>
+            </div>
+            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-purple-900/50 rounded-xl flex items-center justify-center text-purple-400 text-xl sm:text-2xl mb-4 sm:mb-6">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">센터 전용 커뮤니티</h3>
+                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                    공지사항 전달은 물론, 회원 간 소통의 장이 됩니다.
+                </p>
+            </div>
+            <div class="bg-gray-700 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border border-gray-600 sm:col-span-2 md:col-span-1">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-green-900/50 rounded-xl flex items-center justify-center text-green-400 text-xl sm:text-2xl mb-4 sm:mb-6">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">출석 및 활동 데이터</h3>
+                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                    누가 열심히 나오는지, 누가 이탈 위험이 있는지 한눈에 파악하세요. 데이터에 기반한 회원 관리가 가능합니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact"
+         class="py-10 sm:py-16 md:py-24 bg-gray-800 text-white relative overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">7월 정식 오픈,<br
+                class="sm:hidden"> 가장 먼저 만나보세요</h2>
+        <p class="text-blue-100 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
+            지금 사전 신청하시면 <strong>6개월 무료로</strong> 이용하실 수 있습니다.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <a href="https://smore.im/form/wGrMVYhYLJ" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-blue-600 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold transition shadow-2xl hover:shadow-xl">
+                사전 등록하기 <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="https://open.kakao.com/o/sc2ApFfi" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold transition shadow-2xl hover:shadow-xl">
+                <i class="fas fa-comment mr-2"></i> 카카오톡 문의
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-gray-400 py-8 sm:py-12 border-t border-gray-800">
+    <div class="container mx-auto px-4 sm:px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="mb-2 md:mb-0 flex items-center gap-3">
+            <img src="images/oww_icon.png" alt="오운완" class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl">
+            <div>
+                <div class="text-xl sm:text-2xl font-bold text-white mb-0.5">오운완</div>
+                <p class="text-xs sm:text-sm">운동 인증 커뮤니티 솔루션</p>
+            </div>
+        </div>
+        <div class="text-xs sm:text-sm">
+            &copy; 2026 ddamddam.team. All rights reserved.<br>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
