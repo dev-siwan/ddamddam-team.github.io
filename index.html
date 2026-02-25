@@ -3,318 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오운완 - 피트니스 센터를 위한 커뮤니티 솔루션</title>
-    <link rel="icon" type="image/png" href="images/oww_icon.png">
+    <title>오운완-우리 센터 참여 서비스</title>
+    <link rel="icon" href="images/oww_icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          rel="stylesheet">
     <style>
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-        body { font-family: 'Pretendard', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(to right, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap');
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background:
+                radial-gradient(900px 420px at 10% -10%, rgba(148, 163, 184, 0.15), transparent 60%),
+                radial-gradient(900px 420px at 90% 0%, rgba(16, 185, 129, 0.08), transparent 62%),
+                #09090b;
+            color: #e2e8f0;
         }
-        @media (max-width: 767px) {
-            .stat-card + .stat-card {
-                border-top: 1px solid rgba(55, 65, 81, 0.5);
-            }
+
+        .highlight-red {
+            color: #f87171;
         }
-    </style>
-    <style>
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* 전체 길이의 반(세트 A)만큼 이동 후 리셋 */
+
+        .bg-kakao {
+            background-color: #FEE500;
+            color: #111827;
         }
-        .animate-scroll {
-            animation: scroll 20s linear infinite; /* 40초 동안 한 바퀴 (숫자가 클수록 느려짐) */
-        }
-        .paused {
-            animation-play-state: paused;
+
+        .card-shadow {
+            box-shadow: 0 14px 30px -12px rgba(15, 23, 42, 0.6);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="max-w-md mx-auto min-h-screen bg-zinc-950 border-x border-zinc-800">
 
-<header class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-700">
-    <div class="container mx-auto px-3 sm:px-6 py-2.5 sm:py-4 flex justify-between items-center">
-        <img src="images/oww_icon.png" alt="오운완"
-             class="w-8 h-8 sm:w-12 sm:h-12 rounded-xl flex-shrink-0">
-        <div class="flex items-center gap-2 sm:gap-3">
-            <a href="https://open.kakao.com/o/sc2ApFfi" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium transition text-[10px] sm:text-sm whitespace-nowrap">
-                <i class="fas fa-comment mr-1"></i> 도입 문의
-            </a>
-            <a href="https://smore.im/form/wGrMVYhYLJ" target="_blank" rel="noopener noreferrer"
-               class="inline-flex bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium transition shadow-lg shadow-blue-500/30 text-[10px] sm:text-sm whitespace-nowrap">
-                파일럿 신청
-            </a>
-        </div>
+<header class="p-6 sticky top-0 bg-zinc-950/85 backdrop-blur-md z-50 flex justify-between items-center border-b border-zinc-800">
+    <div class="flex items-center gap-3">
+        <img src="images/oww_icon.png" alt="오운완 로고"
+             class="w-10 h-10 rounded-xl border border-zinc-700">
     </div>
+    <a href="https://open.kakao.com/o/gnZCZkii" target="_blank"
+       class="bg-kakao px-4 py-2 rounded-xl font-bold text-sm flex items-center gap-2 hover:scale-[1.02] transition-transform">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg"
+             class="w-4 h-4" alt="kakao">
+        참여하기
+    </a>
 </header>
 
-<section class="pt-24 pb-6 sm:pt-32 sm:pb-10 md:pt-40 md:pb-14 px-4 sm:px-6">
-    <div class="container mx-auto text-center max-w-4xl">
-        <span class="inline-block py-1.5 px-4 rounded-full bg-blue-900/50 text-blue-400 text-xs sm:text-sm font-semibold mb-5 sm:mb-6">
-            🚀 파일럿 피트니스 센터 모집
-        </span>
-
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-8">
-            📢 사장님, 혹시 이런 고민 없으신가요?
+<main class="px-6">
+    <section class="py-12 text-center">
+        <p class="text-green-200 font-bold mb-3">회원은 같이 해야 오래 다닌다</p>
+        <h1 class="text-3xl font-extrabold leading-tight mb-4 text-zinc-50">
+            우리 센터 회원 참여<br>
+            <span class="text-yellow-300">2분이면 붙여드려요</span>
         </h1>
+        <p class="text-zinc-300 leading-relaxed">QR로 바로 가입 → 센터 전용 피드 생성</p>
+        <p class="text-zinc-300 leading-relaxed mt-2 mb-8">회원들이 서로 인증·반응·랭킹하는 구조</p>
 
-        <div class="space-y-4 text-left max-w-2xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-700">
-            <div class="flex items-start">
-                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-xl flex-shrink-0"></i>
-                <p class="text-lg text-gray-300">신규 회원을 겨우 모집하면 <strong>기존 회원은 자꾸 그만둬요.</strong>
-                </p>
+        <a href="https://open.kakao.com/o/gnZCZkii" target="_blank"
+           class="bg-kakao w-full py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-xl shadow-yellow-500/20">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg"
+                 class="w-6 h-6" alt="kakao">
+            오픈카톡 참여하기
+        </a>
+        <p class="mt-4 text-zinc-500 text-xs font-medium">센터 운영자 전용: 데모/운영템플릿/파일럿 안내</p>
+    </section>
+
+    <section class="pb-10">
+        <h2 class="text-2xl font-bold text-zinc-100 mb-6">이런 센터들을 위해 만들었어요</h2>
+        <div class="space-y-3">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-zinc-200 font-medium">
+                💸 신규 유입 광고비가 매달 반복될 때
             </div>
-            <div class="flex items-start">
-                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-xl flex-shrink-0"></i>
-                <p class="text-lg text-gray-300">센터 전용 앱이 있으면 좋겠지만, <strong>개발비가 너무 부담돼요.</strong>
-                </p>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-zinc-200 font-medium">
+                ⚡ 등록은 하는데, 자꾸 안 나올 때
             </div>
-            <div class="flex items-start">
-                <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 text-xl flex-shrink-0"></i>
-                <p class="text-lg text-gray-300">회원들이 서로 어울리면서 <strong>오래 다니는 분위기</strong>를 만들고 싶어요.
-                </p>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-zinc-200 font-medium">
+                📍 센터 분위기가 조용해질 때
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-zinc-200 font-medium">
+                🔥 PT로만 끌고 가기 벅찰 때
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-zinc-200 font-medium">
+                💬 회원들이 서로 친해질 ‘판’이 없을 때
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-zinc-200 font-medium">
+                📉 이탈 조짐이 보여도 뭘 해야 할지 모를 때
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="pt-10 pb-20 bg-gray-900 overflow-hidden">
-    <div class="container mx-auto px-6 text-center mb-10">
-        <h2 class="text-3xl font-bold text-white mb-2">오운완이 해결해드릴게요.</h2>
-        <p class="text-gray-400">오운완은 개인/모임 <strong>운동인증 기반</strong> 서비스로<br>유저들은 이 순간에도 <strong>공유</strong>하고 있습니다.</p>
-    </div>
-
-    <div class="relative w-full group">
-
-        <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-900 to-transparent z-10"></div>
-
-        <div class="flex space-x-6 animate-scroll group-hover:paused w-max">
-
-            <div class="flex space-x-6">
-                <img src="images/img_1.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증1">
-                <img src="images/img_2.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증2">
-                <img src="images/img_3.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증3">
-                <img src="images/img_4.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증4">
-                <img src="images/img_5.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증5">
-                <img src="images/img_6.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증6">
+    <section class="py-10">
+        <h2 class="text-2xl font-bold text-zinc-100 ">회원이 참여하는 <span
+                class="text-yellow-300">3가지 장치</span>
+        </h2>
+        <p class="text-zinc-300 leading-relaxed mb-4">이제 감이 아니라 데이터로 관리하세요!</p>
+        <div class="space-y-5">
+            <div class="card-shadow p-6 rounded-2xl bg-zinc-900 border border-zinc-800">
+                <h3 class="font-bold text-lg text-zinc-100">🏁 센터 챌린지</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed mt-2">출석/운동 인증 미션으로 “다음 방문”을
+                    만들어요</p>
             </div>
-
-            <div class="flex space-x-6">
-                <img src="images/img_1.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증1">
-                <img src="images/img_2.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증2">
-                <img src="images/img_3.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증3">
-                <img src="images/img_4.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증4">
-                <img src="images/img_5.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증5">
-                <img src="images/img_6.jpeg"
-                     class="w-64 h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105 border-4 border-gray-800"
-                     alt="인증6">
+            <div class="card-shadow p-6 rounded-2xl bg-zinc-900 border border-zinc-800">
+                <h3 class="font-bold text-lg text-zinc-100">🎁 포인트/보상</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed mt-2">인증할수록 포인트가 쌓여서 행동이 반복돼요</p>
             </div>
-
+            <div class="card-shadow p-6 rounded-2xl bg-zinc-900 border border-zinc-800">
+                <h3 class="font-bold text-lg text-zinc-100">📊 회원참여 대시보드</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed mt-2">누가 떨어지는지 보이면, 연락도 타이밍이
+                    생겨요</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section
-        class="py-20 md:py-32 bg-gray-800 border-b border-gray-700 flex items-center justify-center text-center">
-    <div class="container mx-auto px-6">
-
-        <div class="mb-6 relative inline-block">
-            <div class="absolute inset-0 bg-yellow-400 blur-3xl opacity-10 rounded-full"></div>
-            <h2 class="relative text-7xl md:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-yellow-500 tracking-tighter">
-                10배 ⬆
-            </h2>
-        </div>
-
-        <div class="space-y-4 max-w-3xl mx-auto">
-            <h3 class="text-2xl md:text-4xl font-bold text-white leading-relaxed">
-                혼자 운동할 때보다<br>
-                <span class="text-yellow-400 border-b-4 border-yellow-400/30 pb-1">함께하는 모임에서</span><br>
-                활동량이 폭발적으로 늘어났습니다.
-            </h3>
-            <p class="text-gray-400 text-lg mt-6">
-                운동은 의지가 아니라 환경입니다.<br>
-                피트니스 센터에 <strong>회원들이 함께 참여 구조</strong>를 만들어 드립니다.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6 text-center max-w-4xl">
-        <h2 class="text-3xl font-bold mb-4">수천만 원 드는 앱 개발?</h2>
-        <p class="text-xl text-gray-400 mb-12">이제 필요 없습니다.🙅</p>
-
-        <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 flex flex-col md:flex-row items-center gap-8">
-            <div class="w-full md:w-1/3 flex justify-center">
-                <div class="w-40 h-40 bg-gray-700 rounded-xl flex items-center justify-center text-white text-6xl">
-                    <i class="fas fa-qrcode"></i>
+    <section class="py-10">
+        <h2 class="text-2xl font-bold text-zinc-100 mb-6">참여가 돌아가면 센터는 이렇게 변해요</h2>
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-700 rounded-2xl border border-zinc-500/30 p-6 text-white">
+            <div class="space-y-2 text-zinc-200 font-semibold text-sm leading-relaxed">
+                <div class="flex items-center justify-center text-center gap-3 rounded-xl border border-zinc-500/35 bg-white/5 px-3 py-2">
+                    <span class="w-7 h-7 rounded-full border border-zinc-400/50 bg-zinc-900/40 flex items-center justify-center">📸</span>
+                    <span>회원 인증</span>
+                </div>
+                <div class="text-center text-zinc-300/80">↓</div>
+                <div class="flex items-center justify-center text-center gap-3 rounded-xl border border-zinc-500/35 bg-white/5 px-3 py-2">
+                    <span class="w-7 h-7 rounded-full border border-zinc-400/50 bg-zinc-900/40 flex items-center justify-center">👥</span>
+                    <span>센터 피드 노출</span>
+                </div>
+                <div class="text-center text-zinc-300/80">↓</div>
+                <div class="flex items-center justify-center text-center gap-3 rounded-xl border border-zinc-500/35 bg-white/5 px-3 py-2">
+                    <span class="w-7 h-7 rounded-full border border-zinc-400/50 bg-zinc-900/40 flex items-center justify-center">❤️</span>
+                    <span>서로 반응(댓글/좋아요)</span>
+                </div>
+                <div class="text-center text-zinc-300/80">↓</div>
+                <div class="flex items-center justify-center text-center gap-3 rounded-xl border border-zinc-500/35 bg-white/5 px-3 py-2">
+                    <span class="w-7 h-7 rounded-full border border-zinc-400/50 bg-zinc-900/40 flex items-center justify-center">🏆</span>
+                    <span>랭킹/챌린지 달성</span>
+                </div>
+                <div class="text-center text-zinc-300/80">↓</div>
+                <div class="flex items-center justify-center text-center gap-3 rounded-xl border border-zinc-500/35 bg-white/5 px-3 py-2">
+                    <span class="w-7 h-7 rounded-full border border-zinc-400/50 bg-zinc-900/40 flex items-center justify-center">🔁</span>
+                    <span>재방문 루틴 생성</span>
                 </div>
             </div>
-            <div class="w-full md:w-2/3 text-left">
-                <h3 class="text-2xl font-bold mb-3 text-blue-400">QR 코드 하나면 끝!</h3>
-                <p class="text-gray-300 text-lg leading-relaxed">
-                    센터에는 <strong>참여용 QR 코드만 비치</strong>하세요.<br>
-                    회원은 QR을 통해 스스로 가입하고 인증합니다.<br>
-                    별도의 관리 없이도 회원들이 알아서 참여 구조를 만들어갑니다.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="features" class="py-16 sm:py-20 md:py-24 bg-gray-800">
-    <div class="container mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12 sm:mb-16">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-white">
-                센터 운영에 <br class="sm:hidden"/>꼭 필요한 기능만 담았습니다
-            </h2>
-            <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
-                복잡한 기능은 뺐습니다.<br class="sm:hidden"> 오직 회원들의 <strong>'동기 부여'</strong>와
-                <strong>'소속감'</strong>에만 집중했습니다.
-            </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
-
-            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
-                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
-                    <img src="images/feature_1.png"
-                         alt="간편한 운동 인증"
-                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-
-                <div class="mt-auto">
-                    <div class="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center text-blue-400 text-xl mb-4">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-white">운동인증 공유</h3>
-                    <p class="text-gray-300 leading-relaxed text-sm">
-                        센터 내 회원들이 서로의 운동 인증을 보고 응원합니다.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
-                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
-                    <img src="images/feature_2.png"
-                         alt="참여형 서비스"
-                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-
-                <div class="mt-auto">
-                    <div class="w-12 h-12 bg-green-900/50 rounded-xl flex items-center justify-center text-green-400 text-xl mb-4">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-white">참여형 서비스</h3>
-                    <p class="text-gray-300 leading-relaxed text-sm">
-                        랭킹 시스템을 통해 자연스럽게 건전한 경쟁이 일어납니다.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
-                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
-                    <img src="images/feature_3.png"
-                         alt="센터 전용 커뮤니티"
-                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-
-                <div class="mt-auto">
-                    <div class="w-12 h-12 bg-purple-900/50 rounded-xl flex items-center justify-center text-purple-400 text-xl mb-4">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-white">센터 전용 커뮤니티</h3>
-                    <p class="text-gray-300 leading-relaxed text-sm">
-                        공지사항 전달은 물론, 회원들이 서로 소통합니다.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-gray-700 rounded-3xl shadow-lg border border-gray-600 p-6 sm:p-8 hover:shadow-2xl transition duration-300 group flex flex-col">
-                <div class="relative mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-lg transition">
-                    <img src="images/feature_4.png"
-                         alt="인증/참여 데이터"
-                         class="w-full aspect-[464/370] object-cover transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-
-                <div class="mt-auto">
-                    <div class="w-12 h-12 bg-gray-900/50 rounded-xl flex items-center justify-center text-gray-400 text-xl mb-4">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-white">인증/참여 데이터</h3>
-                    <p class="text-gray-300 leading-relaxed text-sm">
-                        센터 전용 대시보드를 통해 누가 이탈 위험군인지 한눈에 파악하세요.
-                    </p>
-                </div>
-            </div>
-
+        <div class="mt-6 text-center text-zinc-100 font-bold text-lg leading-relaxed">
+            운영자가 매일 끌고 가는 운영 →<br>
+            <span class="text-cyan-300">회원들이 서로 움직이는 운영</span>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact"
-         class="py-10 sm:py-16 md:py-24 bg-gray-800 text-white relative overflow-hidden">
-    <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
-        <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">런칭 시,<br
-                class="sm:hidden"> 가장 먼저 만나보세요</h2>
-        <p class="text-blue-100 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
-            지금 사전 신청하시면 <strong>1년 무료로</strong> 이용하실 수 있습니다.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-            <a href="https://smore.im/form/wGrMVYhYLJ" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-blue-600 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold transition shadow-2xl hover:shadow-xl">
-                파일럿 사전 신청 <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <a href="https://open.kakao.com/o/sc2ApFfi" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold transition shadow-2xl hover:shadow-xl">
-                <i class="fas fa-comment mr-2"></i> 카카오톡 문의
-            </a>
-        </div>
-    </div>
-</section>
-
-<footer class="bg-gray-900 text-gray-400 py-8 sm:py-12 border-t border-gray-800">
-    <div class="container mx-auto px-4 sm:px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
-        <div class="mb-2 md:mb-0 flex items-center gap-3">
-            <img src="images/oww_icon.png" alt="오운완" class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl">
-            <div>
-                <div class="text-xl sm:text-2xl font-bold text-white mb-0.5">오운완</div>
-                <p class="text-xs sm:text-sm">운동 인증 서비스</p>
+    <section class="py-10">
+        <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-6">
+            <h2 class="text-2xl font-bold text-zinc-100 mb-6">정식 출시 전 참여한 센터에게만 드리는 혜택</h2>
+            <div class="space-y-3 text-zinc-200 text-sm leading-relaxed">
+                <p>✅ 센터 전용 대시보드 무료 제공 (정식 출시 후 유료 전환 예정 기능)</p>
+                <p>✅ 오운완 센터 뱃지 (영구) — 초기 레퍼런스 센터 인증</p>
+                <p>✅ 챌린지 템플릿/운영 가이드 제공 — “뭘 해야 하지?”를 없앰</p>
+                <p>✅ 피드 상위 노출(센터 탭) — 초기 유저 유입 도움</p>
+                <p>✅ 정식 출시 후 1개월 프리미엄 무료</p>
             </div>
         </div>
-        <div class="text-xs sm:text-sm">
-            &copy; 2026 ddamddam.team. All rights reserved.<br>
-        </div>
-    </div>
+    </section>
+</main>
+
+<footer class="p-10 text-center text-zinc-500 text-[10px] border-t border-zinc-800">
+    <p>상호명: 오운완(Owwan) | 서비스 출시 예정: 2026. 07</p>
+    <p class="mt-1 italic">"운동하는 모든 순간이 가치 있도록"</p>
 </footer>
 
 </body>
